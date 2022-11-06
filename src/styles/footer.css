@@ -1,0 +1,28 @@
+.footer_container {
+    width: 100%;
+    margin-top: auto;
+    bottom: 0;
+    position: fixed;
+    height: 70px;
+    background: #545454;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    padding: 2rem;
+}
+a:visited {
+    color: white;
+}
+.cpy {
+    font-size: 1.1rem;
+    margin-right: 100px;
+}
+
+.cpy a:active{
+    color: white;
+}
+.cpy a:visited{
+    color: white;
+}

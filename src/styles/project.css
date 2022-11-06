@@ -1,0 +1,293 @@
+
+
+/* PROJECT PREVIEW LIST */
+.projects_container {
+    width: 100%;
+
+    margin-bottom: 500px;
+}
+
+.project_preview_container {
+    display: flex;
+    width: 100%;
+    padding: 2rem;
+    border: 2px solid #E1E1E1;
+    background:white;
+    border-radius: 20px;
+    margin-top: 2rem;
+    color: #ADADAD;
+}
+
+.project_preview_container:hover{
+    border: 2px solid #36ABFF;
+    cursor: pointer;
+    box-shadow: 2px 5px 15px 1px #e9e9e9;
+}
+
+.add_project {
+    margin-right: 2rem;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+}
+.page_title_container.for_project{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 0rem 1.8rem 2rem;
+}
+.add_project img{
+    width: 80%;
+}
+.add_project img:hover{
+    
+    cursor: pointer;
+    filter: sepia(110%) hue-rotate(190deg) saturate(700%);
+}
+
+.project_title {
+    font-size: 1.6rem;
+}
+
+.project_status {
+    display: flex;
+}
+.active_status{
+    color: #66F035;
+    
+}
+.closed_status{
+    color:#FF7337;
+}
+
+
+.project_preview_container div:first-child{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.projects_list{
+    list-style: none;
+}
+
+
+.project_preview_container div:first-child p {
+    margin-top: 10px;
+}
+.project_preview_container div:first-child p:first-child {
+    margin-top: 0px;
+}
+
+.project_preview_container div:last-child {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.project_preview_container div:last-child p:last-child {
+    margin-top: auto;
+}
+
+/* PROJECT DETAIL PAGE */
+
+.project_detail_container{
+    
+    display: flex;
+    width: 100%;
+    padding: 2rem;
+    border: 2px solid #E1E1E1;
+    background:white;
+    border-radius: 20px;
+    margin-top: 2rem;
+    color: #ADADAD;
+    margin-bottom: 300px;
+}
+
+/* FORM STYLING ON PROJECT DETAIL */
+.project_detail_container form {
+     width: 100%;
+    display:flex;
+    justify-content: space-between;
+   
+}
+
+.update_project_button.delete {
+    background: #FF7337;
+    width: 20%;
+    margin-right: 20px;
+}
+.update_project_button.delete:hover {
+    background: #df5a21;
+    width: 20%;
+    margin-right: 20px;
+}
+
+.project_detail_container form input {
+    font-family: 'inter', sans-serif;
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: 2px solid #E1E1E1; 
+}
+
+.project_detail_inner{
+    display: flex;
+    flex-direction: column;
+}
+
+.form_field {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.form_field label {
+    font-size: 1.3rem;
+    display: flex;
+    width: fit-content;
+    min-width: 130px;
+}
+
+.project_detail_inner.right{
+    
+    margin-left: auto;
+    width: 100%;
+    display: flex;
+    margin-left: 5rem;
+    
+}
+
+.align_div{
+    display: flex;
+    justify-content: left;
+    margin-left: 20px;
+    width: 100%;
+}
+
+.align_div.date{
+    display: flex;
+    align-items: center;
+}
+
+.align_div textarea {
+    font-family: 'inter', sans-serif;
+    justify-self: right;
+    width: 100%;
+    resize: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: 2px solid #E1E1E1; 
+    height: 250px;
+}
+.form_field.right {
+    justify-content: right;
+}
+
+.align_div textarea:focus {
+    
+    outline: none !important;
+    border: 2px solid #36ABFF;
+}
+
+.project_detail_container form input:focus{
+    outline: none !important;
+    border: 2px solid #36ABFF;
+}
+.active_toggle {
+    border: 1px #E1E1E1 solid;
+    width: 50px;
+    border-radius: 500px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+    margin-left: 20px;
+}
+.toggle {
+    background: white;
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    padding: 0.1rem;
+    transition: 300ms;
+} 
+
+.toggle.off{
+    justify-self: right;
+    transition: 300ms;
+}
+
+.active_toggle.on {
+    background: #66F035;
+}
+.active_toggle.off {
+    background: #FF7337;
+    justify-content: right;
+    transition: 300ms;
+}
+
+.form_field.right.status {
+    align-items: center;
+}
+
+.toggle_link:hover {
+    cursor: pointer;
+}
+
+.update_project_button {
+    margin-top: 140px;
+    border: none;
+    width: 50%;
+    background: #36ABFF;
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    transition: 300ms;
+    text-align: center;
+    text-decoration: none;
+}
+.update_project_button:hover{
+    cursor: pointer;
+    background: #1f8bd8;
+}
+.update_project_button:active{
+    cursor: pointer;
+    background: #1467a3;
+}
+
+/* PROJECT CREATION */
+.new_project_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.new_project_form textarea {
+    font-family: 'inter', sans-serif;
+    justify-self: right;
+    width: 50%;
+    resize: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: 2px solid #E1E1E1; 
+    height: 250px;
+}
+.new_project_form input {
+    width: 50%;
+}
+
+.new_project_form input:focus, textarea:focus {
+    outline: none !important;
+    border: 2px solid #36ABFF;
+}
+
+.warning {
+    margin-left: 10px;
+    font-size: 0.8rem;
+}
+
+.update_project_button.create {
+    margin-top: 10px;
+}
+

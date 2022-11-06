@@ -1,0 +1,11 @@
+.header_container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 2rem;
+    
+}
+
+.logo {
+    margin-right: 100px;
+}

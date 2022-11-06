@@ -1,0 +1,48 @@
+.square{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border: 2px solid #E1E1E1;
+    background:white;
+    border-radius: 20px;
+    aspect-ratio: 1;
+}
+
+.square_title{
+    color: #ADADAD;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.info_list{
+    margin-top: auto;
+    list-style: none;
+}
+
+.info_list li {
+    margin-top:auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info_value {
+    font-size: 4rem;
+    color: #66F035;
+}
+
+.info {
+    color: #ADADAD;
+    font-size: 1.5rem;
+}
+
+.info.first_info{
+    margin-bottom: 1rem;
+}
+.info_open{
+    color: #66F035;
+    font-size: 1.5rem;
+}
+.info_closed {
+    color: #FF7337;
+    font-size: 1.5rem
+}
