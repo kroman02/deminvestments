@@ -4,6 +4,7 @@ import Home from './components/Home'
 import Projects from './components/Projects'
 import CommonLayout from './components/CommonLayout'
 import Clients from './components/Clients'
+import CreateClient from './components/CreateClient'
 import Policies from './components/Policies'
 import CreateProject from './components/CreateProject'
 import ProjectDetail from './components/ProjectDetail'
@@ -23,11 +24,11 @@ function App() {
         .then((resp) => resp.json())
         .then((data) => setClients(data))
     }, [])
-
+    
    
 
 
-  console.log(projects)
+  console.log(clients)
   
 
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path="/projects/:id/:name" element={<ProjectDetail />} />
           <Route path="/projects/newproject" element={<CreateProject clients={clients} />} />
           <Route path="/clients" element={<Clients clients={clients} />}/>
+          <Route path="/clients/newclient" element={<CreateClient />}/>
           <Route path="/policies" element={<Policies />}/>
         </Route>
       </Routes>

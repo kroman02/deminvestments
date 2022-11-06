@@ -106,3 +106,16 @@ h2 {
 .page_title a {
   color:red;
 }
+
+.form_field {
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.form_field label {
+  font-size: 1.3rem;
+  display: flex;
+  width: fit-content;
+  min-width: 130px;
+}

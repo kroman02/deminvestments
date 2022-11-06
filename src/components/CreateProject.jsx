@@ -41,7 +41,7 @@ export default function CreateProject(props) {
     }
 
     const createProject = (e) => {
-        if(projectForm.client == null){return;}
+        if(projectForm.client == null || projectForm.client == 0){return;}
         const clientURL = `http://localhost:8080/api/clients/${projectForm.client}/projects`
         const requestOptions = {
             method: 'POST',
@@ -71,13 +71,13 @@ export default function CreateProject(props) {
         <div className="project_detail_container">
             <form onSubmit={createProject} className="new_project_form">
                 <div className="form_field">
-                    <label htmlFor="projectName">Title</label><input id="projectName" name="name" type="text" value={projectForm.name} onChange={handleChange}/>
+                    <label htmlFor="projectName">Title</label><input required id="projectName" name="name" type="text" value={projectForm.name} onChange={handleChange}/>
                 </div>
                 <div className="form_field">
                     <label htmlFor="clientSelect">Client</label>
                     <select 
                     id="clientSelect"
-                    value={"a"}
+                    value={projectForm.client}
                     onChange={handleChange}
                     name="client">
                     {optionElements}
@@ -88,7 +88,7 @@ export default function CreateProject(props) {
                 </div>
                 <div className="form_field">
                 <label htmlFor="descriptionForm"></label>
-                <button className="update_project_button create">Save changes</button>
+                <button className="update_project_button create">Create Project</button>
                 </div>
             </form>
         </div>

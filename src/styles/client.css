@@ -88,3 +88,45 @@
     border-radius: 20px;
     
 }
+
+.client_detail_container {
+    display: flex;
+    width: 100%;
+    padding: 2rem;
+    border: 2px solid #E1E1E1;
+    background:white;
+    border-radius: 20px;
+    margin-top: 2rem;
+    color: #ADADAD;
+    margin-bottom: 300px;
+}
+.new_client_form {
+    display: flex;
+}
+
+.form_field.image{
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo_container{
+    margin-left: 2rem;
+}
+.logo_preview{
+    object-fit: cover;
+    background: rgb(235, 235, 235);
+    width: 220px;
+    height: 160px;
+}
+
+.new_client_form input {
+    font-family: 'inter', sans-serif;
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: 2px solid #E1E1E1; 
+}
+.new_client_form input:focus{
+    outline: none !important;
+    border: 2px solid #36ABFF;
+}

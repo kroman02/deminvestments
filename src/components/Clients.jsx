@@ -7,6 +7,7 @@ export default function Clients(props) {
     if(props.clients != null){
         clientCardElements = props.clients.map(client => {
             return <ClientCard 
+                key={client.id}
                 clientId={client.id}
                 clientName={client.name} 
                 clientPhone={client.phone}
