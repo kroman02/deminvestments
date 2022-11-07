@@ -108,14 +108,26 @@ h2 {
 }
 
 .form_field {
+  font-size: 1rem;
   width: 100%;
   display: flex;
   margin-bottom: 20px;
 }
 
 .form_field label {
-  font-size: 1.3rem;
+  font-size: 1rem;
   display: flex;
-  width: fit-content;
-  min-width: 130px;
+  min-width: 100px;
 }
+
+.default_container {
+    display: flex;
+    width: 100%;
+    padding: 2rem;
+    border: 2px solid #E1E1E1;
+    background:white;
+    border-radius: 20px;
+    margin-top: 2rem;
+    color: #ADADAD;
+}
+

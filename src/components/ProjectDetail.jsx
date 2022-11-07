@@ -10,8 +10,10 @@ export default function ProjectDetail(props){
         textDecoration: "none",
         fontWeight: "600"
     }
+    // Retrieve parameters from router
     const {id, name} = useParams()
-    const [clientFormData, setClientFormData] = useState(null)
+    
+
     const [currentProject, setCurrentProject] = useState(null)
     const navigate = useNavigate();
 
@@ -31,10 +33,12 @@ export default function ProjectDetail(props){
             body: JSON.stringify(currentProject)
         };
         fetch(`http://localhost:8080/api/projects/put/${id}`, requestOptions)
-            .then(response => console.log(response.json()))
+            .then(response => response.json())
+            .then(data => setCurrentProject(data))
             .then(() => {
                 window.location.reload();
             })
+            
     }
 
     const handleChange = (e) => {
@@ -89,6 +93,7 @@ export default function ProjectDetail(props){
                     <label htmlFor="">Client</label>
                     <div className="align_div">
                         <ClientCard 
+                        clientId={currentProject.client.id}
                         clientName={currentProject.client.name} 
                         clientPhone={currentProject.client.phone}
                         clientEmail={currentProject.client.email}

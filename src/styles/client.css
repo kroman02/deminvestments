@@ -33,6 +33,10 @@
 }
 .client_logo{
     width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border: 1px #ADADAD solid;
+    border-radius: 5px;
 }
 
 .clientName {
@@ -130,3 +134,120 @@
     outline: none !important;
     border: 2px solid #36ABFF;
 }
+
+/* CLIENT DETAIL STYLING*/
+
+
+.client_detail_form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.client_detail_form input {
+    width: 100%;
+    font-family: 'inter', sans-serif;
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: 2px solid #E1E1E1; 
+}
+
+.client_detail_form input:focus{
+    outline: none !important;
+    border: 2px solid #36ABFF;
+}
+
+.client_detail_form label {
+    font-size: 1.2rem;
+}
+
+.client_detail_form_right {
+   margin-left: auto;
+   align-items: center;
+   padding-left: 1rem;
+}
+
+.align_div {
+    align-items: flex-start;
+
+}
+
+.form_field.buttons{
+    display: flex;
+    width: 100%;
+    justify-content: right;
+}
+
+.logo_preview {
+    background: url("https://i.ibb.co/r2P5Z7X/image-4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px #E1E1E1 solid;
+    border-radius: 5px;
+}
+
+.client_delete {
+    background: #FF7337;
+    width: 20%;
+    margin-right: 20px;
+    border: none;
+    color: white;
+}
+
+.update_client_button {
+    margin-top: 140px;
+    border: none;
+    width: 50%;
+    background: #36ABFF;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    transition: 300ms;
+    text-align: center;
+    text-decoration: none;
+}
+.update_client_button:hover{
+    cursor: pointer;
+    background: #1f8bd8;
+}
+.update_client_button:active{
+    cursor: pointer;
+    background: #1467a3;
+}
+
+.delete_client_button {
+    margin-right: 20px;
+    margin-top: 140px;
+    border: none;
+    width: 30%;
+    background: #cecece;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    transition: 300ms;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* CLIENT CUSTOMER BASE*/
+
+.default_container.customer_list{
+    margin-bottom: 300px;
+}
+
+
+/* .delete_client_button:hover{
+    cursor: pointer;
+    background: #df5a21;
+}
+.delete_client_button:active{
+    cursor: pointer;
+    background: #df5a21;
+} */
+
+
+

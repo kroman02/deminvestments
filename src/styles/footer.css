@@ -20,6 +20,9 @@ a:visited {
     margin-right: 100px;
 }
 
+a{
+    color: white;
+}
 .cpy a:active{
     color: white;
 }
