@@ -23,7 +23,7 @@ export default function ClientCard(props) {
             <p className="clientName">{props.clientName}</p>
             <p className="phone_info contact_info"><img className="contact_icon" src="/phone_icon.png"/>{props.clientPhone}</p>
             <p className="email_info contact_info"><img className="contact_icon" src="/email_icon.png"/>{props.clientEmail}</p>
-            <Link style={linkStyle} to={`/clients/${props.clientId}`} >More</Link>
+            <Link style={linkStyle} to={`/clients/${props.clientId}/${props.clientName}`} >More</Link>
         </div>
     )
 
