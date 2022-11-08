@@ -1,5 +1,7 @@
 import {useEffect, useState, React} from 'react'
 import {Link, useParams} from 'react-router-dom'
+import CustomerListElement from './CustomerListElement'
+import CustomerBaseList from './CustomerBaseList'
 import Spinner from './Spinner'
 
 export default function ClientDetail() {
@@ -10,9 +12,17 @@ export default function ClientDetail() {
     }
 
     const [currentClient, setCurrentClient] = useState(null)
-
+    const [customerBase, setCustomerBase] = useState(null)
+    const [customerElements, setCustomerElements] = useState([])
     // Retrieve parameters from router
     const {id, name} = useParams()
+
+    useEffect(() => {
+        fetch(`http://localhost:8080/api/customers/byclient/${id}`)
+        .then((resp) => resp.json())
+        .then((data) => setCustomerBase(data))
+        
+    }, [])
 
     useEffect(()=>{
         fetch(`http://localhost:8080/api/clients/${id}`)
@@ -23,6 +33,7 @@ export default function ClientDetail() {
     const addDefaultSrc = (e) => {
         e.target.src = "https://i.ibb.co/r2P5Z7X/image-4.png"
     }
+
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -57,7 +68,7 @@ export default function ClientDetail() {
         </div>
         {
 
-            currentClient == null 
+            currentClient == null || customerBase == null
 
             ?
                 // LOADING DATA
@@ -110,9 +121,15 @@ export default function ClientDetail() {
             </form>
 
         </div>
-        <div className="default_container customer_list">
-        <h2 className="page_title">{name} customer base</h2>
-        </div>
+        {
+            customerBase == null 
+            ?
+            <Spinner />
+            :
+            <CustomerBaseList clientName={name} customers={customerBase}/>
+        }
+        
+        
             </>}
         </>
     )

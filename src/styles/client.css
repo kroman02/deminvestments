@@ -237,6 +237,29 @@
 
 .default_container.customer_list{
     margin-bottom: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.customer_elem {
+    display: flex;
+    align-items: center;
+    border: 2px solid #E1E1E1;
+    background:white;
+    border-radius: 5px;
+    margin: 1rem 0rem 1rem 0rem;
+    padding: 0.5rem;
+}
+
+.detail_holder {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.detail_holder p {
+    font-size: 0.8rem;
 }
 
 

@@ -29,7 +29,7 @@ export default function Home(props){
             <h2 className="page_title">Home Page</h2>
         </div>
         {
-            props.projects == null || props.clients == null
+            props.projects == null || props.clients == null || props.policies == null
 
             ?
 
@@ -71,7 +71,7 @@ export default function Home(props){
             <ul className="info_list">
                 <li>
                     <div className="info"></div>
-                    <div className="info_value"><Number n={12}/></div>
+                    <div className="info_value"><Number n={props.policies.length}/></div>
                 </li>
             </ul>
         </div>

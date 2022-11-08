@@ -15,6 +15,7 @@ function App() {
   
   const [projects, setProjects] = useState(null)
   const [clients, setClients] = useState(null)
+  const [policies, setPolicies] = useState(null)
 
     useEffect(() => {
         fetch('http://localhost:8080/api/projects')
@@ -24,6 +25,11 @@ function App() {
         fetch('http://localhost:8080/api/clients')
         .then((resp) => resp.json())
         .then((data) => setClients(data))
+
+
+        fetch('http://localhost:8080/api/policies')
+        .then((resp) => resp.json())
+        .then((data) => setPolicies(data))
     }, [])
 
    
@@ -37,7 +43,7 @@ function App() {
       <Routes>
         
         <Route path ="/" element={<CommonLayout />} >
-          <Route index element={<Home projects={projects} clients={clients} />} />
+          <Route index element={<Home projects={projects} clients={clients} policies={policies}/>} />
           <Route path="/projects" element={<Projects projects={projects} />}/>
           <Route path="/projects/:id/:name" element={<ProjectDetail />} />
           <Route path="/projects/newproject" element={<CreateProject clients={clients} />} />
