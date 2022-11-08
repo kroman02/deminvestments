@@ -4,11 +4,20 @@ import Spinner from './Spinner'
 
 export default function CustomerBase(props){
 
+
+    
+
     const [listElements, setListElements] = useState(
             props.customers.map(customer => {
-                return <CustomerListElement customer={customer}/>
+                return <CustomerListElement  
+                id={customer.id} 
+                key={customer.id} 
+                customer={customer}/>
             })
     )
+
+    
+    console.log(listElements[1])
 
     return (
         <>

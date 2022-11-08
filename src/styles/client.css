@@ -18,7 +18,7 @@
 }
 .clients_container >* {
     max-width: 280px;
-    min-width: 250px;
+    min-width: 220px;
     flex: 1 1 120px;
 }
 
@@ -243,15 +243,24 @@
 
 .customer_elem {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     border: 2px solid #E1E1E1;
     background:white;
     border-radius: 5px;
     margin: 1rem 0rem 1rem 0rem;
     padding: 0.5rem;
+    transition: 300ms;
+    
+}
+
+.customer_elem.active{
+    
+    transition: 300ms;
 }
 
 .detail_holder {
+    transition: 300ms;
     width: 100%;
     display: grid;
     gap: 1rem;
@@ -262,7 +271,47 @@
     font-size: 0.8rem;
 }
 
+.details_buttons {
+    grid-column-start: 7;
+    padding-bottom: 0.5rem;
+}
 
+.opentest {
+    color: rgb(39, 155, 238);
+    font-size: 0.8rem;
+}
+
+.opentest:hover {
+    cursor: pointer;
+} 
+.header_details {
+    color: #989898;
+}
+
+.save_details {
+    margin-left: 10px;
+    background: #2b98e6;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 3px;
+}
+
+.policy_detail {
+    padding-bottom: 0.5rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.policy_detail p {
+    font-size: 0.8rem;
+}
+
+.no_policy_notice {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
 /* .delete_client_button:hover{
     cursor: pointer;
     background: #df5a21;
@@ -274,3 +323,41 @@
 
 
 
+
+
+
+@media (max-width: 1440px) {
+    .clients_container {
+        justify-content: right;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1rem;
+        width: 100%;
+        margin-bottom: 200px;
+    }
+    .clients_container >* {
+        max-width: 250px;
+        min-width: 220px;
+        flex: 1 1 120px;
+    }
+    .client_card_container{
+        font-size: 1.2rem;
+        background: white;
+        padding: 2rem;
+        border: 2px solid #E1E1E1;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        color: #ADADAD;
+    }
+
+    
+    .contact_info{
+        font-size: 0.9rem;
+    }
+
+    .clientName {
+        font-size: 1.2rem;
+    }
+  }
